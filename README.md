@@ -17,12 +17,12 @@
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Usage](#usage)
-  - [👥 Author ](#-author)
-  - [🔭 Future Features ](#-future-features)
-  - [🤝 Contributing ](#-contributing-)
-  - [⭐️ Show your support ](#️-support-)
-  - [🙏 Acknowledgments ](#-acknowledgments)
-  - [📝 License ](#-license-)
+  - [👥 Author ](#author)
+  - [🔭 Future Features ](#future-features)
+  - [🤝 Contributing ](#contributing)
+  - [⭐️ Show your support ](#️support)
+  - [🙏 Acknowledgments ](#acknowledgments)
+  - [📝 License ](#license)
 
 
 <!-- PROJECT DESCRIPTION -->
