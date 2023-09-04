@@ -1,38 +1,52 @@
 
 <div align="center">
-  <h1>📚 School Library Management App</h1>
+
+  <h1><b>School Library</b></h1>
+
 </div>
+
 
 <!-- TABLE OF CONTENTS -->
 
-# 📖 Table of Contents
+# 📗 Table of Contents
 
-- [About the Project](#about-project)
-  - [🛠️ Built With](#built-with)
-  - [🔑 Key Features](#key-features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-  - [Adding Students and Teachers](#adding-students-and-teachers)
-  - [Adding Books](#adding-books)
-  - [Borrowing Records](#borrowing-records) 
-- [👤 Author](#author)
-- [Contributing](#contributing)
-- [Support](#support)
-- [License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 School Library ](#-School-Library)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Usage](#usage)
+  - [👥 Author ](#-author-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
-# 📖 About the Project <a name="about-project"></a>
+<!-- PROJECT DESCRIPTION -->
 
-The School Library Management App is designed to streamline the process of managing books and borrowers within the university library. This Ruby project allows librarians to efficiently add new students and teachers, add books to the library's collection, and maintain accurate records of book borrowing activities.
+# 📖 School Library <a name="about-project"></a>
 
-## 🛠️ Built With <a name="built-with"></a>
+
+The School Library Management App is designed to streamline the process of managing books and borrowers within the university library. This Ruby project allows librarians to efficiently add new students and teachers, add books to the library's collection, and maintain accurate records of book borrowing activities
+
+## 🛠 Built With <a name="built-with"></a>
 
 - Ruby
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+### Tech Stack <a name="tech-stack"></a>
 
-<!-- FEATURES -->
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
 
 ### 🔑 Key Features <a name="key-features"></a>
 
@@ -43,6 +57,9 @@ The School Library Management App is designed to streamline the process of manag
 - **Track Borrowing Records:** 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- GETTING STARTED -->
 
 # Getting Started <a name="getting-started"></a>
 
@@ -109,6 +126,25 @@ The School Library Management App is designed to streamline the process of manag
 - GitHub: [@kit0-0](https://github.com/kit0-0)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Implement User Authentication**: Allow users to create accounts, log in, and personalize their library experience.
+
+- [ ] **Search and Filter Functionality**: Add search and filter options to make it easier for users to find books in the library.
+
+- [ ] **Integration with External APIs**: Enhance the library's catalog by integrating with external book databases to provide detailed book information.
+
+- [ ] **User Ratings and Reviews**: Enable users to rate and review books, helping others make informed choices.
+
+- [ ] **Mobile-Friendly Design**: Optimize the application's design for mobile devices to provide a seamless experience on smartphones and tablets.
+
+- [ ] **Notification System**: Implement a notification system to alert users about due dates, reservations, and library announcements.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 # Contributing <a name="contributing"></a>
 
