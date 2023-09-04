@@ -20,8 +20,7 @@
   - [👥 Author ](#author)
   - [🔭 Future Features ](#future-features)
   - [🤝 Contributing ](#contributing)
-  - [⭐️ Show your support ](#️support)
-  - [🙏 Acknowledgments ](#acknowledgments)
+  - [⭐️ Support ](#support)
   - [📝 License ](#license)
 
 
