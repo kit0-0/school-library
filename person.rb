@@ -6,7 +6,7 @@ class Person < Nameable
 
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
-    @id = rand(1_000_000) # Assign a random ID as it was missing in the code.
+    @id = rand(1_000_000)
 
     @name = name
     @age = age
@@ -30,7 +30,8 @@ class Person < Nameable
     @name
   end
 
-  def add_rental(rental)
-    rentals << rental
+  def add_rental(date, book)
+    rental = Rental.new(date, book, self)
+    rentals << rental unless rentals.include?(rental)
   end
 end
