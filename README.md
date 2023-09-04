@@ -6,25 +6,24 @@
 </div>
 
 
-<!-- TABLE OF CONTENTS -->
-
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 School Library ](#-School-Library)
-  - [🛠 Built With ](#-built-with-)
+  - [🛠 Built With ](#-built-with)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Usage](#usage)
-  - [👥 Author ](#-author-)
-  - [🔭 Future Features ](#-future-features-)
+  - [👥 Author ](#-author)
+  - [🔭 Future Features ](#-future-features)
   - [🤝 Contributing ](#-contributing-)
-  - [⭐️ Show your support ](#️-show-your-support-)
-  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [⭐️ Show your support ](#️-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments)
   - [📝 License ](#-license-)
+
 
 <!-- PROJECT DESCRIPTION -->
 
