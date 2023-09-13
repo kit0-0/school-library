@@ -1,10 +1,13 @@
 require_relative 'app'
 
-puts 'Welcome to our school library'
-
 def main
   app = App.new
-  app.start
+  app.load_data
+  loop do
+    app.display_options
+    app.choose_option
+    puts "\n"
+  end
 end
 
 main
