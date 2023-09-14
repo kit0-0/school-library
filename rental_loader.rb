@@ -1,4 +1,3 @@
-# rental_loader.rb
 require_relative 'rental'
 
 class RentalLoader
@@ -7,7 +6,6 @@ class RentalLoader
   end
 
   def load_rentals(data, books, people)
-    # Load rental data from JSON and create Rental objects
     data.each do |rental_data|
       book = books.find { |b| b.title == rental_data['book']['title'] }
       person = people.find { |p| p.id == rental_data['person']['id'] }
@@ -16,6 +14,4 @@ class RentalLoader
     end
     @rentals
   end
-
-  # Add any other methods related to loading rentals here
 end

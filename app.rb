@@ -1,4 +1,3 @@
-# app.rb
 require_relative 'person_loader'
 require_relative 'book_loader'
 require_relative 'rental_loader'
@@ -119,38 +118,19 @@ class App
     puts 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
     input = gets.chomp
 
-
-
     if %w[1 2].include?(input)
-
       puts 'Age: '
-
-      age_input = gets.chomp
-
-
-
+      age = gets.chomp
       puts 'Name: '
-
-      name_input = gets.chomp
-
+      input = gets.chomp
     end
-
-
-
     case input
-
     when '1'
-
-      create_student(age_input, name_input)
-
+      create_student(age, name)
     when '2'
-
-      create_teacher(age_input, name_input)
-
+      create_teacher(input, name)
     else
-
       puts 'Please enter a valid input'
-
     end
   end
 
@@ -240,8 +220,6 @@ class App
 
     end
 
-
-
     puts 'Select a person from the following list by number (not id)'
 
     @people.map.with_index do |people, idx|
@@ -252,8 +230,6 @@ class App
 
     people_choice = gets.chomp.to_i
 
-
-
     if people_choice.negative? || people_choice >= @people.length
 
       puts 'Invalid input! Please enter a number within the range.'
@@ -261,8 +237,6 @@ class App
       return
 
     end
-
-
 
     puts 'Date: '
 

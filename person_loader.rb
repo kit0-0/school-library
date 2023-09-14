@@ -9,7 +9,6 @@ class PersonLoader
   end
 
   def load_people(data)
-    # Load people data from JSON and create Person objects
     data.each do |person_data|
       if person_data['type'] == 'Student'
         student = Student.new(person_data['age'], person_data['name'],
@@ -24,6 +23,4 @@ class PersonLoader
     end
     @people
   end
-
-  # Add any other methods related to loading people here
 end
