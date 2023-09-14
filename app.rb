@@ -117,18 +117,17 @@ class App
   def create_person
     puts 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
     input = gets.chomp
-
     if %w[1 2].include?(input)
       puts 'Age: '
-      age = gets.chomp
+      age_input = gets.chomp
       puts 'Name: '
-      input = gets.chomp
+      name_input = gets.chomp
     end
     case input
     when '1'
-      create_student(age, name)
+      create_student(age_input, name_input)
     when '2'
-      create_teacher(input, name)
+      create_teacher(age_input, name_input)
     else
       puts 'Please enter a valid input'
     end
