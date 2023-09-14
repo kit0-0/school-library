@@ -1,58 +1,55 @@
-require_relative 'person'
-require_relative 'student'
-require_relative 'teacher'
-require_relative 'book'
-require_relative 'rental'
-require_relative 'classroom'
+# app.rb
+require_relative 'person_loader'
+require_relative 'book_loader'
+require_relative 'rental_loader'
 require_relative 'json_persistence'
 require 'json'
+
 class App
   def initialize
+    @people_loader = PersonLoader.new
+    @book_loader = BookLoader.new
+    @rental_loader = RentalLoader.new
     @people = []
     @books = []
     @rentals = []
   end
 
-  def display_options
-    puts "Welcome to school library app!
-    Please choose an option by entering a number:
-      1 - List all books
-      2 - List all people
-      3 - Create a person
-      4 - Create a book
-      5 - Create a rental
-      6 - List all rentals for a given person id
-      7 - Exit"
+  def load_data
+    people_data = JSON.parse(File.read('people.json'))
+    book_data = JSON.parse(File.read('books.json'))
+    rentals_data = JSON.parse(File.read('rentals.json'))
+
+    @people = @people_loader.load_people(people_data)
+    @books = @book_loader.load_books(book_data)
+    @rentals = @rental_loader.load_rentals(rentals_data, @books, @people)
   end
 
-  def load_data
-    books = FileReader.new('books.json').read
-    people = FileReader.new('people.json').read
-    rentals_data = FileReader.new('rentals.json').read
-    books.map { |book| @books.push(Book.new(book['title'], book['author'])) }
-    people.each do |person_data|
-      if person_data['type'] == 'Student'
-        student = Student.new(person_data['age'], person_data['name'],
-                              parent_permission: person_data['parent_permission'])
-        student.instance_variable_set(:@id, person_data['id'])
-        @people << student
-      else
-        teacher = Teacher.new(person_data['specialization'], person_data['age'], person_data['name'])
-        teacher.instance_variable_set(:@id, person_data['id'])
-        @people << teacher
-      end
-    end
+  def display_options
+    puts 'Welcome to the school library app!'
+    puts 'Please choose an option by entering a number:'
+    puts '1 - List all books'
+    puts '2 - List all people'
+    puts '3 - Create a person'
+    puts '4 - Create a book'
+    puts '5 - Create a rental'
+    puts '6 - List all rentals for a given person id'
+    puts '7 - Exit'
+  end
 
-
-
-    rentals_data.each do |rental_data|
-      book = @books.find { |b| b.title == rental_data['book']['title'] }
-
-      person = @people.find { |p| p.id == rental_data['person']['id'] }
-
-      rental = Rental.new(rental_data['date'], book, person)
-
-      @rentals << rental
+  def choose_option
+    option = gets.chomp
+    case option
+    when '1' then load_books
+    when '2' then load_people
+    when '3' then create_person
+    when '4' then create_book
+    when '5' then create_rental
+    when '6' then display_rentals_by_person_id
+    when '7'
+      save
+      puts 'Thank you for using this app!'
+      exit
     end
   end
 
@@ -116,22 +113,6 @@ class App
       }
     end
     FileWriter.new('rentals.json').write(rentals_data)
-  end
-
-  def choose_option
-    option = gets.chomp
-    case option
-    when '1' then load_books
-    when '2' then load_people
-    when '3'then create_person
-    when '4'then create_book
-    when '5' then create_rental
-    when '6'then display_rentals_by_person_id
-    when '7'
-      save
-      puts 'Thank you for using this app!'
-      exit
-    end
   end
 
   def create_person
