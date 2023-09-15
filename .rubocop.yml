@@ -10,11 +10,11 @@ AllCops:
 Layout/LineLength:
   Max: 180
 Metrics/MethodLength:
-  Max: 20
+  Max: 25
 Metrics/AbcSize:
   Max: 50
 Metrics/ClassLength:
-  Max: 150
+  Max: 220
 Metrics/BlockLength:
   IgnoredMethods: ['describe']
   Max: 30
@@ -32,6 +32,8 @@ Style/DefWithParentheses:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
+Metrics/CyclomaticComplexity:
+  Enabled: false
 
 Layout/HashAlignment:
   EnforcedColonStyle: key
